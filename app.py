@@ -66,7 +66,7 @@ def get_header():
 
         html.Div([
             html.H5(
-                'Welcome Mr. Miguel Briones')
+                'Welcome Miguel')
         ], className="twelve columns padded")
 
     ], className="row gs-header gs-text-header")
@@ -78,7 +78,7 @@ def get_menu():
 
         dcc.Link('Overview   ', href='/overview', className="tab first"),
 
-        dcc.Link('Price Performance   ', href='/price-performance', className="tab"),
+        dcc.Link('Job#345  ', href='/price-performance', className="tab"),
 
         dcc.Link('Portfolio & Management   ', href='/portfolio-management', className="tab"),
 
