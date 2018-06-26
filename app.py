@@ -76,9 +76,9 @@ def get_header():
 def get_menu():
     menu = html.Div([
 
-        dcc.Link('Overview   ', href='/overview', className="tab first"),
+        dcc.Link('Job Fit   ', href='/overview', className="tab first"),
 
-        dcc.Link('Job#345  ', href='/price-performance', className="tab"),
+        dcc.Link('About Me  ', href='/price-performance', className="tab"),
 
         dcc.Link('Portfolio & Management   ', href='/portfolio-management', className="tab"),
 
@@ -109,7 +109,7 @@ overview = html.Div([  # page 1
             html.Div([
 
                 html.Div([
-                    html.H6('Product Summary',
+                    html.H6('Job Description',
                             className="gs-header gs-text-header padded"),
 
                     html.Br([]),
@@ -128,7 +128,7 @@ overview = html.Div([  # page 1
                 ], className="six columns"),
 
                 html.Div([
-                    html.H6(["Fund Facts"],
+                    html.H6(["Top Profiles"],
                             className="gs-header gs-table-header padded"),
                     html.Table(make_dash_table(df_fund_facts))
                 ], className="six columns"),
@@ -140,24 +140,24 @@ overview = html.Div([  # page 1
             html.Div([
 
                 html.Div([
-                    html.H6('Average annual performance',
+                    html.H6('Candidate Trait Fit',
                             className="gs-header gs-text-header padded"),
                     dcc.Graph(
-                        id = "graph-1",
+                        id="graph-1",
                         figure={
                             'data': [
                                 go.Bar(
-                                    x = ["1 Year", "3 Year", "5 Year", "10 Year", "41 Year"],
-                                    y = ["21.67", "11.26", "15.62", "8.37", "11.11"],
-                                    marker = {
+                                    x=["1 Year", "3 Year", "5 Year", "10 Year", "41 Year"],
+                                    y=["21.67", "11.26", "15.62", "8.37", "11.11"],
+                                    marker={
                                       "color": "rgb(53, 83, 255)",
                                       "line": {
                                         "color": "rgb(255, 255, 255)",
                                         "width": 2
                                       }
                                     },
-                                    name = "500 Index Fund",
-                                    type = "bar"
+                                    name="500 Index Fund",
+                                    type="bar"
                                 ),
                                 go.Bar(
                                     x = ["1 Year", "3 Year", "5 Year", "10 Year", "41 Year"],
@@ -220,7 +220,7 @@ overview = html.Div([  # page 1
                         }
                     )
                 ], className="six columns"),
-
+                '''
                 html.Div([
                     html.H6("Hypothetical growth of $10,000",
                             className="gs-header gs-table-header padded"),
@@ -290,7 +290,7 @@ overview = html.Div([  # page 1
                         }
                     )
                 ], className="six columns"),
-
+                '''
             ], className="row "),
 
             # Row 5
@@ -641,7 +641,7 @@ pricePerformance = html.Div([  # page 2
     ], className="page")
 
 
-portfolioManagement = html.Div([ # page 3
+portfolioManagement = html.Div([  # page 3
 
         print_button(),
 
